@@ -105,5 +105,12 @@ document.getElementById("btnPrev").removeAttribute("hidden");
             <!-- Элементы слайдера -->
             <div class="item"></div>
         </div>
+        <!-- Если нужны буллеты -->
+        <ul class="bullets" id="bullets"></ul>
+        <!-- Если нужны кнопки управления -->
+        <div class="control">
+            <button id="btnPrev">
+            <button id="btnNext">
+        </div>
     </div>
 ```
