@@ -1,0 +1,286 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input[type="text"] {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body .lock {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.moduleGrid {
+    display: none;
+}
+
+.page {
+    margin-top: 100px;
+    flex: 1 1 auto;
+}
+@media (max-width: 1440px) {
+    .page {
+        margin-top: calc(50px + 50 * ((100vw - 390px) / 1530));
+    }
+}
+
+.g-container {
+    max-width: 1510px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 0px auto;
+}
+@media screen and (max-width: 1024px) {
+    .g-container {
+        max-width: 1072px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin: 0px auto;
+    }
+}
+
+.photo {
+    margin: 0 auto;
+    /* background: url("../img/default/default-album.jpg") center/cover no-repeat; */
+}
+.photo-block {
+    padding: 0px 0px 58% 0px;
+    overflow: hidden;
+    position: relative;
+}
+.photo-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-container {
+    max-width: 50%;
+    margin: 20px auto;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы слайды не сжимались */
+    flex-shrink: 0;
+    position: relative;
+}
+
+#gallery {
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.gallery-line {
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-unit {
+    float: left;
+    min-height: 1px;
+}
+
+.controls {
+    margin: 0px auto;
+}
+
+#btnPrev {
+    position: absolute;
+    top: 50%;
+    left: -32px;
+    border-radius: 50%;
+    box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+#btnNext {
+    position: absolute;
+    top: 50%;
+    right: -58px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.bullets {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.bullet {
+    height: 8px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bullets li[data-active="active"] {
+    box-shadow: 1px 1px 3px 3px rgba(255, 255, 255, 0.7);
+    background-color: #fff;
+}
+
+.numberSlide {
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+    left: 45%;
+}
+
+.one-text {
+    color: #fff;
+    font-style: italic;
+}
+
+.currentSlide {
+    color: #fff;
+    font-size: small;
+}
+
+.separator {
+    color: #fff;
+    font-style: italic;
+}
+
+.length-slide {
+    color: #fff;
+    font-size: small;
+}
+
+.progressBar {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.progressBar .progressBarChild {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    border: 0.7px solid #0857ea;
+}
+/*# sourceMappingURL=style.css.map */

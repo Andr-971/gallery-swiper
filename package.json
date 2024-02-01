@@ -1,0 +1,20 @@
+{
+  "name": "gallery-swiper",
+  "version": "1.0.0",
+  "description": "gallery-swiper",
+  "main": "gallery-swiper.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andr-971/gallery-swiper.git"
+  },
+  "keywords": [],
+  "author": "AndreyRyabov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andr-971/gallery-swiper/issues"
+  },
+  "homepage": "https://github.com/Andr-971/gallery-swiper#readme"
+}
