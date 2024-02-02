@@ -17,6 +17,9 @@
 ## Использование
 >js
 ```js
+"use strict";
+import Gallery from "gallery-swiper";
+
 const options = {
     // Обязательные параметры
     class: {
