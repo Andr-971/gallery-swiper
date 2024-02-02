@@ -13,10 +13,14 @@
 >11. Нумерация слайдов(опция);
 >12. Прогресс Бар(опция);
 ## Установка
-    npm i gallery-swiper -S
+    npm i gallery-swiper
 ## Использование
 >js
 ```js
+"use strict";
+
+import Gallery from "gallery-swiper";
+
 const options = {
     // Обязательные параметры
     class: {
@@ -70,7 +74,7 @@ document.getElementById("btnPrev").removeAttribute("hidden");
 ```
 >css
 ```css
-    .slider-container {
+.slider-container {
     max-width: 50%;
     margin: 20px auto;
     /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
