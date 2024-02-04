@@ -98,6 +98,74 @@ document.getElementById("btnPrev").removeAttribute("hidden");
     float: left;
     min-height: 1px;
 }
+
+.controls {
+  margin: 0px auto;
+}
+
+#btnPrev {
+  position: absolute;
+  top: 50%;
+  left: -32px;
+  border-radius: 50%;
+  box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+#btnNext {
+  position: absolute;
+  top: 50%;
+  right: -58px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bullet {
+  height: 8px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bullets li[data-active=active] {
+  box-shadow: 1px 1px 3px 3px rgba(255, 255, 255, 0.7);
+  background-color: #fff;
+}
+
+.numberSlide {
+  position: absolute;
+  top: 10px;
+  z-index: 10;
+  left: 45%;
+}
+
+.one-text, .separator {
+  font-style: italic;
+}
+
+.currentSlide, .length-slide {
+  font-size: small;
+}
+
+.progressBar .progressBarChild {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  border: 0.7px solid #0857ea;
+}
 ```
 >html
 ```html
@@ -107,13 +175,15 @@ document.getElementById("btnPrev").removeAttribute("hidden");
         <div id="gallery">
             <!-- Элементы слайдера -->
             <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
         </div>
         <!-- Если нужны буллеты -->
         <ul class="bullets" id="bullets"></ul>
         <!-- Если нужны кнопки управления -->
         <div class="control">
-            <button id="btnPrev">
-            <button id="btnNext">
+            <button id="btnPrev">Назад</button>
+            <button id="btnNext">Вперёд</button>
         </div>
     </div>
 ```
