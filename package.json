@@ -1,6 +1,6 @@
 {
   "name": "gallery-swiper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "gallery-swiper",
   "main": "gallery-swiper.min.js",
   "scripts": {
